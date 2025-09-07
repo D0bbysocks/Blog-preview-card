@@ -1,0 +1,100 @@
+:root {
+    /* Colors */
+    --yellow: #F4D04E;
+    --gray-950: #111111;
+    --gray-500: #6B6B6B;
+    --white: #FFFFFF;
+
+    /* spacing-sclae */
+    --space-50: .25rem;
+    --space-100: .5rem;
+    --space-150: .75rem;
+    --space-300: 1.5rem;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900; /* Variabler Bereich */
+  font-style: normal;
+}
+
+/* 2. Reset / Normalize */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow);
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 384px;
+    margin: 0 auto;
+    background-color: var(--white);
+    font-family: "Figtree", sans-serif;
+    padding: var(--space-300);
+    border-radius: 1.25rem;
+}
+
+
+.card-wrapper > img.logo {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 279 / 200;
+  object-fit: cover;
+  border-radius: .625rem;
+}
+
+
+.tag {
+    width: fit-content;
+    padding: var(--space-50) var(--space-150);
+    background-color: var(--yellow);
+    border-radius: var(--space-50);
+    font-size: .75rem;
+    font-weight: 900;
+    margin-top: var(--space-300);
+}
+
+.published {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-top: var(--space-150);
+}
+
+
+.headshot {
+    width: 32px;
+    height: 32px;
+}
+
+.card-wrapper h1 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-top: var(--space-150);
+}
+
+.card-wrapper p {
+    font-size: .875rem;
+    color: var(--gray-500);
+    margin-top: var(--space-150);
+}
+
+.author {
+    display: flex;
+    gap: var(--space-150);
+    margin-top: var(--space-300);
+}
