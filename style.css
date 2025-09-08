@@ -32,23 +32,29 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--yellow);
+}
+
+main {
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--yellow);
 }
 
 .card-wrapper {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 384px;
+    width: clamp(300px, 80vw, 384px);
+    flex: 0 0 auto;
     margin: 0 auto;
     background-color: var(--white);
     font-family: "Figtree", sans-serif;
     padding: var(--space-300);
     border-radius: 1.25rem;
+    box-shadow: 8px 8px 0 0 #000000;
+    border: 1px solid var(--gray-950);
 }
-
 
 .card-wrapper > img.logo {
   display: block;
@@ -64,13 +70,13 @@ body {
     padding: var(--space-50) var(--space-150);
     background-color: var(--yellow);
     border-radius: var(--space-50);
-    font-size: .75rem;
+    font-size: clamp(0.75rem, 0.6rem + 0.5vw, 0.875rem);
     font-weight: 900;
     margin-top: var(--space-300);
 }
 
 .published {
-    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.6rem + 0.5vw, 0.875rem);
     font-weight: 500;
     margin-top: var(--space-150);
 }
@@ -82,19 +88,49 @@ body {
 }
 
 .card-wrapper h1 {
-    font-size: 1.25rem;
-    font-weight: 900;
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+    font-weight: 800;
     margin-top: var(--space-150);
+    user-select: none;
+}
+
+.card-wrapper h1:hover {
+    color: var(--yellow);
+    text-shadow: 0 0 4px var(--yellow);
+    cursor: pointer;
+}
+
+.card-wrapper h1:active {
+    text-shadow: 0 0 6px var(rgb(133, 75, 75));
 }
 
 .card-wrapper p {
-    font-size: .875rem;
+    font-size: clamp(0.875rem, 0.75rem + 0.5vw, 1rem);
     color: var(--gray-500);
     margin-top: var(--space-150);
 }
 
 .author {
     display: flex;
+    align-items: center;
     gap: var(--space-150);
     margin-top: var(--space-300);
+}
+
+.author h3 {
+    font-size: 14px;
+    user-select: none;
+}
+
+.author h3:hover {
+    color: var(--yellow);
+    text-shadow: 0 0 6px var(--yellow);
+}
+
+footer {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    text-align: center;
+    padding: var(--space-300);
 }
